@@ -1,4 +1,5 @@
 import { View, FlatList, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { styles } from './styles';
 import { Profile } from '../../components/Profile';
@@ -6,10 +7,14 @@ import { ListHeader } from '../../components/ListHeader';
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { CategorySelect } from '../../components/CategorySelect';
 import { Appointment } from '../../components/Appointment';
+import { ListDivider } from '../../components/ListDivider';
+import { Background } from '../../components/Background';
 
 export function Home() {
 
   const [category, setCategory] = useState('');
+
+  const navigation = useNavigation();
 
   const appointments = [
     {
@@ -30,37 +35,45 @@ export function Home() {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
+  function handleAppointmentsDetails() {
+    navigation.navigate('AppointmentDetails');
+  }
+  
+  function handleAppointmentsCreate() {
+    navigation.navigate('AppointmentCreate');
+  }
+
   return (
-    <View>
+    <Background>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={handleAppointmentsCreate}/>
       </View>
 
-      <View style={styles.container}>
         <CategorySelect 
           categorySelected={category}
           setCategory={handleCategorySelect}
         />
-        <View style={styles.content}>
+        
           <ListHeader 
             title="Partidas Agendadas" 
             subtitle="Total 6" 
           />
-
-          <FlatList 
+         
+        <FlatList 
             data={appointments}
             keyExtractor={item => String(item.id)}
             renderItem={({ item }) => (
-              <Appointment data={item} />
+              <Appointment data={item} 
+                onPress={handleAppointmentsDetails}
+              />
               )}
+              ItemSeparatorComponent={() => <ListDivider />}
+              contentContainerStyle={{ paddingRight: 69 }}
               style={styles.matches}
               showsHorizontalScrollIndicator={false}
           />
-          
-        </View>
-      </View>
-    </View>
+    </Background>
   );
 }
 

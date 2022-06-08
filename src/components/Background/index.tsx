@@ -4,7 +4,7 @@ import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
 
 type ChildrenProps = {
-    children: JSX.Element[]
+    children: JSX.Element[] | JSX.Element;
 }
 
 export function Background({ children }: ChildrenProps) {
