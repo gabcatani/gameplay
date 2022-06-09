@@ -10,13 +10,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     flex: 1,
     textAlign: 'center',
     fontFamily: theme.fonts.title700,
     fontSize: 20,
-    color: theme.colors.heading
+    color: theme.colors.heading,
   }
 });

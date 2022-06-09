@@ -2,16 +2,16 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-        width: 53,
-        height: 53,
-        borderRadius: 8,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginRight: 22
+    width: 49,
+    height: 49,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 22
   },
-    avatar: {
-        width: 46,
-        height: 46,
-        borderRadius: 8,
-    }
-})
+  avatar: {
+    width: 46,
+    height: 46,
+    borderRadius: 8
+  }
+});

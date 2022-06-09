@@ -7,13 +7,12 @@ export const styles = StyleSheet.create({
     height: 48,
     backgroundColor: theme.colors.secondary40,
     color: theme.colors.heading,
-    borderRadaius: 8,
+    borderRadius: 8,
     fontFamily: theme.fonts.text400,
     fontSize: 13,
     marginRight: 4,
     textAlign: 'center',
-    borderColor: theme.colors.secondary50,
-    borderWidth: 1
-  },
-  
+    borderWidth: 1,
+    borderColor: theme.colors.secondary50
+  }
 });

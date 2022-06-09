@@ -14,12 +14,12 @@ export const styles = StyleSheet.create({
   },
   nameStatus: {
     fontFamily: theme.fonts.text400,
-    fontSize: 13,
-    color: theme.colors.highlight
+    color: theme.colors.highlight,
+    fontSize: 13
   },
   status: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   bulletStatus: {
     width: 8,

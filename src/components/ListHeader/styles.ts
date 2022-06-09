@@ -10,13 +10,13 @@ export const styles = StyleSheet.create({
     marginTop: 27
   },
   title: {
-      fontFamily: theme.fonts.title700,
-      color: theme.colors.heading,
-      fontSize: 18,
+    fontFamily: theme.fonts.title700,
+    color: theme.colors.heading,
+    fontSize: 18,
   },
-    subtitle: {
-        fontFamily: theme.fonts.text400,
-        color: theme.colors.highlight,
-        fontSize: 13,
-    }
+  subtitle: {
+    fontFamily: theme.fonts.text400,
+    color: theme.colors.highlight,
+    fontSize: 13,
+  }
 });
